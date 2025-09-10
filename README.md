@@ -1,4 +1,4 @@
-# 📈 IV Calculator (C++) — Implied Volatility Estimator
+# 📈 IV Calculator (C++) — Implied Volatility Prediction using Black-Scholes Model
 
 This project implements an **Implied Volatility (IV) Calculator** in C++, using both **Newton-Raphson** and **Bisection methods** to estimate the implied volatility of European call/put options based on the **Black-Scholes formula**.
 

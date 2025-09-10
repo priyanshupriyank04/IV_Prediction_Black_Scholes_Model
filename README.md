@@ -18,9 +18,15 @@ This project implements an **Implied Volatility (IV) Calculator** in C++, using 
 
 - **Black-Scholes Pricing Formula**  
   Computes theoretical price of a European option:
-  \[
-  C = S N(d_1) - K e^{-rT} N(d_2), \quad P = K e^{-rT} N(-d_2) - S N(-d_1)
-  \]
+  C=S⋅N(d1​)−K⋅e−rT⋅N(d2​)
+  P=K⋅e−rT⋅N(−d2​)−S⋅N(−d1​)
+
+  S = Current stock (spot) price
+  K = Strike price of option contract
+  T = Time to maturity (in years)
+  r = Risk-free rate
+  sigma = Volatility of the underlying asset (annualised standard deviation)
+  N(x) = Cumulative distribution function of the standard normal distribution 
 
 - **Implied Volatility**  
   The volatility `σ` that makes the Black-Scholes price equal to the observed market price.
@@ -34,10 +40,7 @@ This project implements an **Implied Volatility (IV) Calculator** in C++, using 
 
 - **Newton-Raphson Method**  
   Fast convergence using the Vega derivative  
-  \[
-  \sigma_{\text{next}} = \sigma - \frac{BS(\sigma) - \text{Market Price}}{\text{Vega}(\sigma)}
-  \]
-
+  
 - **Bisection Method**  
   Guaranteed convergence by iteratively narrowing a bracket.
 

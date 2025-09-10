@@ -1,6 +1,7 @@
 #include "black_scholes.hpp"
 #include <cmath> 
 #include <stdexcept>
+#include <iostream>
 
 using namespace std;
 constexpr double PI = 3.14159265358979323846;
@@ -23,6 +24,7 @@ double norm_cdf(double x)
 
 double d1(double S, double K, double r, double T, double sigma)
 {
+    
     if(S<=0 || K<=0 || r<=0 || T<=0 || sigma<=0)
     {
         throw invalid_argument("Inputs must be positive");
